@@ -9,12 +9,12 @@ namespace ConsoleMain
         static void Main(string[] args)
         {
             /*
-            //POST
+            //POST DLL
             DoRequestPost post = new DoRequestPost();
             post.Inserir();
             */
 
-            //GET
+            //GET DLL
             DoRequestGet busca = new DoRequestGet();
             busca.Busca();
         }
