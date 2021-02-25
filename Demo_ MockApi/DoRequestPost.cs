@@ -10,6 +10,8 @@ namespace Demo__MockApi
 
         public DoRequestPost() { }
 
+
+
         public void Inserir()
         {
             WebRequest request = WebRequest.Create("https://600607e63698a80017de12e2.mockapi.io/demo");
@@ -25,14 +27,19 @@ namespace Demo__MockApi
             stream.Close();
 
             var response = (HttpWebResponse)request.GetResponse();
+
             if (response.StatusCode == HttpStatusCode.Created)
             {
                 Console.WriteLine("Post => ok");
+                Console.WriteLine("\r\nResponse Status Code is OK and StatusDescription is: {0}", response.StatusDescription);
+                Console.WriteLine("\r\nResponse Status Code is OK and StatusDescription is: {0}", response.StatusCode);
                 Console.WriteLine(json);
+
+
             }
             else
             {
-                Console.Write("fail Post");
+                Console.Write("fail Post", response.StatusCode);
             }
         }
 

@@ -23,7 +23,7 @@ namespace Demo__MockApi
                 {
                     StreamReader streamReader = new StreamReader(stream);
                     string content = streamReader.ReadToEnd();
-                    Console.Write("GET" + content);
+                    Console.WriteLine("GET" + content);
                 }
             }
             else
